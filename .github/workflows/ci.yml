@@ -8,10 +8,10 @@ on:
 
 jobs:
     deploy:
-      runs-on: ubuntu_latest
+      runs-on: ubuntu-latest
       steps:
         - name: checkout
           uses: actions/checkout@v2
 
         - name: build app
-          run:  docker build -t python_app։1.0.0 .
+          run:  docker build -t python_app:1.0.0 .
