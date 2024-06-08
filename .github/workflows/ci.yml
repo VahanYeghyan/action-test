@@ -10,5 +10,8 @@ jobs:
     deploy:
       runs-on: ubuntu_latest
       steps:
-       - name: build app
-         run: docker build -t python_app։1.0.0 .
+        - name: checkout
+          uses: actions/checkout@v2
+
+        - name: build app
+          run:  docker build -t python_app։1.0.0 .
