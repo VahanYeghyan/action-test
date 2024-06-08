@@ -1,15 +1,14 @@
-- name: Workflow for app
+name: Workflow for app
 
 on:
-   push:
-      branches: [ main ]
-   pull_request:
-      branches: [ main ]
+ push:
+   branches: [ main ]
+ pull_request:
+   branches: [ main ]
 
 jobs:
     deploy:
-          runs_on: ubuntu_latest
-
-    steps:
-         - name: build app
-           run: docker
+      runs-on: ubuntu_latest
+      steps:
+       - name: build app
+         run: docker build -t python_app։1.0.0 .
